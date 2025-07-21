@@ -1,0 +1,387 @@
+{
+  "blog_posts": [
+    {
+      "id": "evolution-of-film-scoring",
+      "title": "The Evolution of Film Scoring: From Orchestra to Digital Innovation",
+      "slug": "evolution-of-film-scoring",
+      "excerpt": "Explore how film scoring has transformed over the decades, from traditional orchestral compositions to cutting-edge digital soundscapes, and what this means for modern storytelling.",
+      "content": "The art of film scoring has undergone a remarkable transformation since the early days of cinema. What began as simple piano accompaniments to silent films has evolved into a sophisticated blend of traditional orchestration and cutting-edge digital innovation...",
+      "category": "insights",
+      "author": {
+        "id": "james-mitchell",
+        "name": "James Mitchell",
+        "role": "Lead Composer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Orchestra performing in a concert hall",
+      "tags": ["Film Scoring", "Music Technology", "Digital Audio", "Orchestration", "Sound Design"],
+      "read_time": 8,
+      "published_date": "2024-12-15",
+      "updated_date": "2024-12-15",
+      "featured": true,
+      "published": true,
+      "views": 1247,
+      "likes": 89,
+      "comments_count": 23,
+      "seo": {
+        "meta_title": "The Evolution of Film Scoring - Sonar Music Blog",
+        "meta_description": "Explore how film scoring has transformed over the decades, from traditional orchestral compositions to cutting-edge digital soundscapes.",
+        "og_image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=630&fit=crop",
+        "keywords": ["film scoring", "music composition", "digital audio", "orchestration", "sound design"]
+      },
+      "related_posts": ["atmospheric-soundscapes", "ai-music-composition", "studio-equipment-guide"]
+    },
+    {
+      "id": "atmospheric-soundscapes",
+      "title": "Behind the Scenes: Creating Atmospheric Soundscapes",
+      "slug": "atmospheric-soundscapes",
+      "excerpt": "A deep dive into our process for creating immersive atmospheric sounds that enhance narrative tension and emotional impact in film and television.",
+      "content": "Creating atmospheric soundscapes is both an art and a science. It requires a deep understanding of how sound affects human psychology and emotion...",
+      "category": "process",
+      "author": {
+        "id": "sarah-chen",
+        "name": "Sarah Chen",
+        "role": "Sound Designer",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b332e234?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Behind the scenes in a recording studio",
+      "tags": ["Sound Design", "Atmospheric Music", "Creative Process", "Studio Techniques"],
+      "read_time": 5,
+      "published_date": "2024-12-10",
+      "updated_date": "2024-12-10",
+      "featured": false,
+      "published": true,
+      "views": 892,
+      "likes": 67,
+      "comments_count": 15,
+      "seo": {
+        "meta_title": "Creating Atmospheric Soundscapes - Behind the Scenes",
+        "meta_description": "A deep dive into our process for creating immersive atmospheric sounds that enhance narrative tension.",
+        "og_image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1200&h=630&fit=crop",
+        "keywords": ["sound design", "atmospheric music", "audio production", "film sound"]
+      },
+      "related_posts": ["evolution-of-film-scoring", "production-workflow", "field-recording-techniques"]
+    },
+    {
+      "id": "ai-music-composition",
+      "title": "AI and Music Composition: Tool or Creative Partner?",
+      "slug": "ai-music-composition",
+      "excerpt": "Exploring how artificial intelligence is reshaping music composition and what it means for human creativity in the digital age.",
+      "content": "The integration of artificial intelligence into music composition represents one of the most significant developments in the field since the invention of the synthesizer...",
+      "category": "technology",
+      "author": {
+        "id": "michael-roberts",
+        "name": "Michael Roberts",
+        "role": "Music Producer",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1200&h=600&fit=crop",
+      "featured_image_alt": "AI and music technology interface",
+      "tags": ["Artificial Intelligence", "Music Technology", "Composition", "Future of Music"],
+      "read_time": 7,
+      "published_date": "2024-12-08",
+      "updated_date": "2024-12-08",
+      "featured": false,
+      "published": true,
+      "views": 1156,
+      "likes": 94,
+      "comments_count": 31,
+      "seo": {
+        "meta_title": "AI and Music Composition: Tool or Creative Partner?",
+        "meta_description": "Exploring how artificial intelligence is reshaping music composition and what it means for human creativity.",
+        "og_image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1200&h=630&fit=crop",
+        "keywords": ["AI music", "artificial intelligence", "music composition", "technology"]
+      },
+      "related_posts": ["evolution-of-film-scoring", "studio-equipment-guide", "future-of-sound"]
+    },
+    {
+      "id": "director-interview",
+      "title": "In Conversation: Acclaimed Director on Sound Design",
+      "slug": "director-interview",
+      "excerpt": "An exclusive interview discussing the crucial role of sound design in modern filmmaking and how it shapes audience experience.",
+      "content": "In this exclusive interview, we sit down with acclaimed director Maria Santos to discuss her approach to sound design and how it influences her filmmaking process...",
+      "category": "interviews",
+      "author": {
+        "id": "emma-rodriguez",
+        "name": "Emma Rodriguez",
+        "role": "Composer & Orchestrator",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Director in interview setting",
+      "tags": ["Interview", "Directors", "Sound Design", "Filmmaking", "Creative Process"],
+      "read_time": 12,
+      "published_date": "2024-12-05",
+      "updated_date": "2024-12-05",
+      "featured": false,
+      "published": true,
+      "views": 734,
+      "likes": 52,
+      "comments_count": 18,
+      "seo": {
+        "meta_title": "Director Interview: Sound Design in Modern Filmmaking",
+        "meta_description": "An exclusive interview discussing the crucial role of sound design in modern filmmaking.",
+        "og_image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200&h=630&fit=crop",
+        "keywords": ["director interview", "sound design", "filmmaking", "creative process"]
+      },
+      "related_posts": ["atmospheric-soundscapes", "evolution-of-film-scoring", "collaboration-tips"]
+    },
+    {
+      "id": "industry-trends-2024",
+      "title": "2024 Music Industry Trends: What We've Learned",
+      "slug": "industry-trends-2024",
+      "excerpt": "A comprehensive look at the major trends shaping the music and sound design industry this year, from technology to creative approaches.",
+      "content": "As we near the end of 2024, it's time to reflect on the major trends that have shaped our industry this year...",
+      "category": "insights",
+      "author": {
+        "id": "david-park",
+        "name": "David Park",
+        "role": "Audio Engineer",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Industry trends and technology",
+      "tags": ["Industry Trends", "Music Business", "Technology", "Market Analysis"],
+      "read_time": 6,
+      "published_date": "2024-12-01",
+      "updated_date": "2024-12-01",
+      "featured": false,
+      "published": true,
+      "views": 1023,
+      "likes": 78,
+      "comments_count": 27,
+      "seo": {
+        "meta_title": "2024 Music Industry Trends: What We've Learned",
+        "meta_description": "A comprehensive look at the major trends shaping the music and sound design industry this year.",
+        "og_image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=630&fit=crop",
+        "keywords": ["music industry", "trends 2024", "sound design", "music business"]
+      },
+      "related_posts": ["ai-music-composition", "future-of-sound", "evolution-of-film-scoring"]
+    },
+    {
+      "id": "production-workflow",
+      "title": "From Concept to Final Mix: Our Production Workflow",
+      "slug": "production-workflow",
+      "excerpt": "Take a detailed look at how we transform initial concepts into polished, professional soundtracks through our proven production process.",
+      "content": "Our production workflow has been refined over years of experience, combining creative flexibility with technical precision...",
+      "category": "process",
+      "author": {
+        "id": "lisa-zhang",
+        "name": "Lisa Zhang",
+        "role": "Junior Composer",
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Recording session in progress",
+      "tags": ["Production", "Workflow", "Creative Process", "Studio Techniques"],
+      "read_time": 9,
+      "published_date": "2024-11-28",
+      "updated_date": "2024-11-28",
+      "featured": false,
+      "published": true,
+      "views": 645,
+      "likes": 43,
+      "comments_count": 12,
+      "seo": {
+        "meta_title": "From Concept to Final Mix: Our Production Workflow",
+        "meta_description": "Take a detailed look at how we transform initial concepts into polished, professional soundtracks.",
+        "og_image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=1200&h=630&fit=crop",
+        "keywords": ["production workflow", "music production", "studio process", "sound design"]
+      },
+      "related_posts": ["atmospheric-soundscapes", "studio-equipment-guide", "collaboration-tips"]
+    },
+    {
+      "id": "studio-equipment-guide",
+      "title": "Essential Studio Equipment for Modern Composers",
+      "slug": "studio-equipment-guide",
+      "excerpt": "Our recommendations for the must-have tools and equipment for contemporary music production and composition.",
+      "content": "Setting up a modern composition studio requires careful consideration of both traditional and cutting-edge tools...",
+      "category": "technology",
+      "author": {
+        "id": "james-mitchell",
+        "name": "James Mitchell",
+        "role": "Lead Composer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Modern studio equipment setup",
+      "tags": ["Studio Equipment", "Music Technology", "Composition Tools", "Audio Gear"],
+      "read_time": 4,
+      "published_date": "2024-11-25",
+      "updated_date": "2024-11-25",
+      "featured": false,
+      "published": true,
+      "views": 1298,
+      "likes": 106,
+      "comments_count": 34,
+      "seo": {
+        "meta_title": "Essential Studio Equipment for Modern Composers",
+        "meta_description": "Our recommendations for the must-have tools and equipment for contemporary music production.",
+        "og_image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop",
+        "keywords": ["studio equipment", "music technology", "composer tools", "audio gear"]
+      },
+      "related_posts": ["ai-music-composition", "production-workflow", "home-studio-setup"]
+    },
+    {
+      "id": "collaboration-tips",
+      "title": "Effective Collaboration Between Composers and Directors",
+      "slug": "collaboration-tips",
+      "excerpt": "Learn the best practices for fostering creative partnerships that result in outstanding musical scores and satisfied clients.",
+      "content": "Successful film scoring is fundamentally about collaboration between composer and director...",
+      "category": "process",
+      "author": {
+        "id": "sarah-chen",
+        "name": "Sarah Chen",
+        "role": "Sound Designer",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b332e234?w=100&h=100&fit=crop&crop=face"
+      },
+      "featured_image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop",
+      "featured_image_alt": "Collaborative meeting between creative professionals",
+      "tags": ["Collaboration", "Creative Process", "Client Relations", "Professional Tips"],
+      "read_time": 6,
+      "published_date": "2024-11-20",
+      "updated_date": "2024-11-20",
+      "featured": false,
+      "published": true,
+      "views": 567,
+      "likes": 38,
+      "comments_count": 9,
+      "seo": {
+        "meta_title": "Effective Collaboration Between Composers and Directors",
+        "meta_description": "Learn the best practices for fostering creative partnerships in film scoring.",
+        "og_image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=630&fit=crop",
+        "keywords": ["collaboration", "film scoring", "creative process", "director composer"]
+      },
+      "related_posts": ["director-interview", "production-workflow", "creative-inspiration"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "insights",
+      "name": "Industry Insights",
+      "description": "Deep dives into industry trends and analysis",
+      "color": "#c8966a",
+      "post_count": 3
+    },
+    {
+      "id": "process",
+      "name": "Creative Process",
+      "description": "Behind-the-scenes looks at our creative workflow",
+      "color": "#4a9eff",
+      "post_count": 3
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "description": "Latest tools and tech in music production",
+      "color": "#ff6b6b",
+      "post_count": 2
+    },
+    {
+      "id": "interviews",
+      "name": "Interviews",
+      "description": "Conversations with industry professionals",
+      "color": "#4ecdc4",
+      "post_count": 1
+    }
+  ],
+  "tags": [
+    "Film Scoring",
+    "Sound Design",
+    "Music Technology",
+    "Creative Process",
+    "Studio Techniques",
+    "Collaboration",
+    "Industry Trends",
+    "Artificial Intelligence",
+    "Production",
+    "Audio Engineering",
+    "Composition",
+    "Technology",
+    "Equipment",
+    "Professional Tips"
+  ],
+  "authors": [
+    {
+      "id": "james-mitchell",
+      "name": "James Mitchell",
+      "role": "Lead Composer",
+      "bio": "James has over 15 years of experience in film scoring and specializes in hybrid orchestral-electronic compositions.",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+      "social": {
+        "linkedin": "https://linkedin.com/in/jamesmitchell",
+        "twitter": "https://twitter.com/jamesmitchell_music"
+      },
+      "post_count": 3
+    },
+    {
+      "id": "sarah-chen",
+      "name": "Sarah Chen",
+      "role": "Sound Designer",
+      "bio": "Sarah is a multi-award winning sound designer with expertise in creating immersive audio experiences.",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b332e234?w=100&h=100&fit=crop&crop=face",
+      "social": {
+        "linkedin": "https://linkedin.com/in/sarahchen-audio",
+        "twitter": "https://twitter.com/sarahchen_sound"
+      },
+      "post_count": 2
+    },
+    {
+      "id": "michael-roberts",
+      "name": "Michael Roberts",
+      "role": "Music Producer",
+      "bio": "Michael is an accomplished music producer with a talent for bringing creative visions to life.",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+      "social": {
+        "linkedin": "https://linkedin.com/in/michaelroberts-producer"
+      },
+      "post_count": 1
+    },
+    {
+      "id": "emma-rodriguez",
+      "name": "Emma Rodriguez",
+      "role": "Composer & Orchestrator",
+      "bio": "Emma brings fresh perspectives and classical training to modern composition challenges.",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+      "social": {
+        "linkedin": "https://linkedin.com/in/emmarodriguez-composer"
+      },
+      "post_count": 1
+    },
+    {
+      "id": "david-park",
+      "name": "David Park",
+      "role": "Audio Engineer",
+      "bio": "David brings technical excellence and creative insight to every project.",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face",
+      "social": {
+        "linkedin": "https://linkedin.com/in/davidpark-audio"
+      },
+      "post_count": 1
+    },
+    {
+      "id": "lisa-zhang",
+      "name": "Lisa Zhang",
+      "role": "Junior Composer",
+      "bio": "Lisa represents the next generation of film composers with fresh ideas and innovative techniques.",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+      "social": {
+        "instagram": "https://instagram.com/lisa_zhang_composer"
+      },
+      "post_count": 1
+    }
+  ],
+  "meta": {
+    "total_posts": 8,
+    "published_posts": 8,
+    "draft_posts": 0,
+    "featured_posts": 1,
+    "total_views": 7562,
+    "total_likes": 567,
+    "total_comments": 169,
+    "last_updated": "2024-12-15",
+    "average_read_time": 7.1
+  }
+}

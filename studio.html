@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Sonar Music</title>
+    <meta name="description" content="Discover our state-of-the-art facilities, cutting-edge equipment, and innovative creative process that brings extraordinary sound to life.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/pages.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+    <div id="cursor-trail"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition">
+        <div class="transition-wipe"></div>
+        <div class="transition-curtain">
+            <div class="curtain-panel"></div>
+            <div class="curtain-panel"></div>
+            <div class="curtain-panel"></div>
+            <div class="curtain-panel"></div>
+            <div class="curtain-panel"></div>
+        </div>
+        <div class="transition-fragments"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <div id="particles-container" class="particles-container"></div>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/" class="logo-link" data-cursor="hover">
+                        <span class="logo-text">SONAR</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="/work" class="nav-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-link w--current" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-link" data-cursor="hover">Team</a>
+                    <a href="/contact" class="nav-link" data-cursor="hover">Contact</a>
+                </nav>
+
+                <!-- Right Side -->
+                <div class="header-right">
+                    <!-- Shopping Cart -->
+                    <div class="cart-icon" data-cursor="hover">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" data-cursor="hover">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile">
+            <div class="nav-mobile-content">
+                <nav class="nav-mobile-links">
+                    <a href="/work" class="nav-mobile-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-mobile-link w--current" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-mobile-link" data-cursor="hover">Team</a>
+                    <a href="/contact" class="nav-mobile-link" data-cursor="hover">Contact</a>
+                </nav>
+                <div class="nav-mobile-social">
+                    <p class="social-title">Socials</p>
+                    <a href="#" class="social-link" data-cursor="hover">Instagram</a>
+                    <a href="#" class="social-link" data-cursor="hover">Facebook</a>
+                    <a href="#" class="social-link" data-cursor="hover">LinkedIn</a>
+                    <a href="#" class="social-link" data-cursor="hover">Spotify</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Studio Hero -->
+        <section class="page-hero studio-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="breadcrumb animate-text">
+                        <a href="/" data-cursor="hover">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">Studio</span>
+                    </div>
+
+                    <h1 class="page-title animate-text-reveal">
+                        <span class="title-word">Where</span>
+                        <span class="title-word">Sound</span>
+                        <span class="title-word">Comes</span>
+                        <span class="title-word">Alive</span>
+                    </h1>
+
+                    <p class="page-description animate-text">
+                        Step inside our world-class facilities where cutting-edge technology meets artistic vision. Our studio is designed to capture every nuance of sonic expression, from intimate acoustic performances to epic orchestral recordings.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="float-element float-1"></div>
+                <div class="float-element float-2"></div>
+                <div class="float-element float-3"></div>
+            </div>
+        </section>
+
+        <!-- Studio Overview -->
+        <section class="studio-overview">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-content">
+                        <h2 class="section-title animate-text">Our Philosophy</h2>
+                        <div class="section-divider"></div>
+                        <p class="overview-text animate-text">
+                            At Sonar Music, we believe that exceptional sound design begins with exceptional spaces. Our studio is more than just a collection of equipment—it's a carefully crafted environment where creativity flourishes and sonic possibilities are limitless.
+                        </p>
+                        <p class="overview-text animate-text">
+                            Every element of our facility has been designed with one goal in mind: to provide the perfect acoustic environment for capturing and creating the most nuanced, powerful, and emotionally resonant soundscapes possible.
+                        </p>
+
+                        <div class="studio-stats">
+                            <div class="stat-item" data-magnetic="true">
+                                <div class="stat-number" data-count="12">0</div>
+                                <div class="stat-label">Recording Suites</div>
+                            </div>
+                            <div class="stat-item" data-magnetic="true">
+                                <div class="stat-number" data-count="64">0</div>
+                                <div class="stat-label">Channel Mixing</div>
+                            </div>
+                            <div class="stat-item" data-magnetic="true">
+                                <div class="stat-number" data-count="500">0</div>
+                                <div class="stat-label">m² Total Space</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-visual">
+                        <div class="studio-image" style="background-image: url('https://ext.same-assets.com/2289865681/4143233605.webp')">
+                            <div class="image-overlay"></div>
+                            <div class="play-overlay" data-cursor="video">
+                                <div class="play-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5V19L19 12L8 5Z"/>
+                                    </svg>
+                                </div>
+                                <p class="play-text">Virtual Studio Tour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Features -->
+        <section class="studio-features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title animate-text">Studio Capabilities</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description animate-text">
+                        Our state-of-the-art facilities are equipped with the latest technology and designed for maximum creative flexibility.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card" data-magnetic="true">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Dolby Atmos Mixing</h3>
+                        <p class="feature-description">
+                            Immersive audio mixing with our Dolby Atmos certified suite, featuring 64-channel mixing capabilities and pristine acoustic treatment for the most accurate monitoring environment.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-magnetic="true">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM7 7H17V9H7V7ZM7 11H17V13H7V11ZM7 15H13V17H7V15Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Live Room Recording</h3>
+                        <p class="feature-description">
+                            Multiple isolation booths and a spacious live room designed for recording everything from solo instruments to full ensembles, with variable acoustics and premium microphone selection.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-magnetic="true">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17C15.24 5.06 14.25 5 13.17 5C10.18 5 2.39 6.11 2.39 9H21.61L21 9ZM6 10C5.45 10 5 10.45 5 11V22H7V16H9V22H11V11C11 10.45 10.55 10 10 10H6Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Sound Design Suite</h3>
+                        <p class="feature-description">
+                            Dedicated sound design workstations equipped with the latest software, synthesizers, and processing hardware for creating unique soundscapes and custom audio elements.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-magnetic="true">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 6H16V4C16 2.89 15.11 2 14 2H10C8.89 2 8 2.89 8 4V6H4C2.89 6 2.01 6.89 2.01 8L2 19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM10 4H14V6H10V4ZM20 19H4V8H20V19ZM13 10V18H11V10H13Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Post-Production</h3>
+                        <p class="feature-description">
+                            Complete post-production facilities with video sync capabilities, ADR booths, and specialized equipment for film, television, and commercial audio finishing.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-magnetic="true">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L13.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Mastering Suite</h3>
+                        <p class="feature-description">
+                            Professional mastering environment with reference-grade monitoring, analog and digital processing chains, and acoustically optimized listening position for final polish.
+                        </p>
+                    </div>
+
+                    <div class="feature-card" data-magnetic="true">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9 11H15V13H9V11ZM18 15H16V17H14V19H16V21H18V19H20V17H18V15ZM16 3H8C6.9 3 6 3.9 6 5V19C6 20.1 6.9 21 8 21H12V19H8V5H16V12H18V5C18 3.9 17.1 3 16 3ZM9 7H15V9H9V7Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Archive & Storage</h3>
+                        <p class="feature-description">
+                            Comprehensive digital asset management with redundant backup systems, ensuring your projects are safely stored and easily accessible for future reference or revision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Showcase -->
+        <section class="equipment-showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title animate-text">Premium Equipment</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="equipment-grid">
+                    <div class="equipment-category">
+                        <h3 class="category-title">Mixing Consoles</h3>
+                        <div class="equipment-list">
+                            <div class="equipment-item">
+                                <div class="equipment-name">SSL AWS 948</div>
+                                <div class="equipment-description">48-channel analog console with Total Recall</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Avid S6L-32D</div>
+                                <div class="equipment-description">Live sound and studio mixing system</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Neve 8801</div>
+                                <div class="equipment-description">8-channel analog summing mixer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="equipment-category">
+                        <h3 class="category-title">Monitoring</h3>
+                        <div class="equipment-list">
+                            <div class="equipment-item">
+                                <div class="equipment-name">PMC MB2S-XBD-A</div>
+                                <div class="equipment-description">Reference main monitors</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Yamaha NS-10M</div>
+                                <div class="equipment-description">Industry standard near-field monitors</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Auratone 5C</div>
+                                <div class="equipment-description">Mix translation reference</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="equipment-category">
+                        <h3 class="category-title">Microphones</h3>
+                        <div class="equipment-list">
+                            <div class="equipment-item">
+                                <div class="equipment-name">Neumann U67</div>
+                                <div class="equipment-description">Vintage tube vocal microphone</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">AKG C414 XLS</div>
+                                <div class="equipment-description">Multi-pattern condenser microphone</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Royer R-121</div>
+                                <div class="equipment-description">Premium ribbon microphone</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="equipment-category">
+                        <h3 class="category-title">Outboard Gear</h3>
+                        <div class="equipment-list">
+                            <div class="equipment-item">
+                                <div class="equipment-name">Universal Audio 1176</div>
+                                <div class="equipment-description">Classic FET compressor</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Lexicon 480L</div>
+                                <div class="equipment-description">Digital reverb processor</div>
+                            </div>
+                            <div class="equipment-item">
+                                <div class="equipment-name">Eventide H9000</div>
+                                <div class="equipment-description">Multi-effects harmonizer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="studio-process">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title animate-text">Our Process</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description animate-text">
+                        From concept to completion, our proven methodology ensures exceptional results on every project.
+                    </p>
+                </div>
+
+                <div class="process-timeline">
+                    <div class="timeline-item" data-magnetic="true">
+                        <div class="timeline-number">01</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Discovery & Planning</h3>
+                            <p class="timeline-description">
+                                We begin every project with in-depth consultation to understand your vision, requirements, and creative goals. This phase includes script analysis, reference gathering, and technical planning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-magnetic="true">
+                        <div class="timeline-number">02</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Pre-Production</h3>
+                            <p class="timeline-description">
+                                Detailed preparation including equipment selection, studio booking, session scheduling, and creative development. We ensure every element is perfectly aligned before recording begins.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-magnetic="true">
+                        <div class="timeline-number">03</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Recording & Creation</h3>
+                            <p class="timeline-description">
+                                The magic happens in our state-of-the-art studios. Whether recording live instruments, creating sound design, or producing electronic elements, we capture every nuance with precision.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-magnetic="true">
+                        <div class="timeline-number">04</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Post-Production</h3>
+                            <p class="timeline-description">
+                                Mixing, mastering, and final polish bring everything together. Our post-production suite ensures perfect sync, optimal levels, and industry-standard delivery formats.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-magnetic="true">
+                        <div class="timeline-number">05</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Delivery & Support</h3>
+                            <p class="timeline-description">
+                                Final delivery in all required formats, complete with documentation and ongoing support. We remain available for revisions and future project collaboration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual Tour CTA -->
+        <section class="virtual-tour-cta">
+            <div class="container">
+                <div class="tour-content">
+                    <h2 class="cta-title animate-text-reveal">
+                        <span class="title-word">Experience</span>
+                        <span class="title-word">Our</span>
+                        <span class="title-word">Studio</span>
+                    </h2>
+                    <p class="cta-description animate-text">
+                        Take a virtual tour of our facilities or schedule a visit to see where your next project will come to life.
+                    </p>
+                    <div class="cta-buttons animate-text">
+                        <a href="/virtual-tour" class="cta-primary" data-cursor="hover" data-magnetic="true">
+                            Virtual Studio Tour
+                        </a>
+                        <a href="/contact" class="cta-secondary" data-cursor="hover">
+                            Schedule a Visit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <!-- Newsletter Section -->
+        <div class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Sign Up to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="submit" class="newsletter-button" data-cursor="hover">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="newsletter-feedback">
+                        <p class="success-message">Thank you! Your submission has been received!</p>
+                        <p class="error-message">Oops! Something went wrong while submitting the form.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-company">
+                        <h3 class="footer-title">Sonar Music</h3>
+                        <div class="company-info">
+                            <p><span class="info-label">Company:</span> Sonar Music</p>
+                            <p><span class="info-label">Location:</span> Disney Studios</p>
+                            <p><span class="info-label">Categories:</span> Film, Advertising, Television</p>
+                            <p><span class="info-label">City:</span> Sydney, AU</p>
+                            <p><span class="info-label">Services:</span> Music Composition & Sound Design</p>
+                        </div>
+
+                        <div class="footer-services">
+                            <h4 class="services-title">Services</h4>
+                            <div class="services-grid">
+                                <a href="/categories/film" class="service-link" data-cursor="hover">Film</a>
+                                <a href="/categories/advertising" class="service-link" data-cursor="hover">Advertising</a>
+                                <a href="/categories/television" class="service-link" data-cursor="hover">Television</a>
+                                <a href="/categories/documentary" class="service-link" data-cursor="hover">Documentary</a>
+                                <a href="/categories/sonic-branding" class="service-link" data-cursor="hover">Sonic Branding</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-sitemap">
+                        <h4 class="footer-subtitle">Sitemap</h4>
+                        <nav class="sitemap-nav">
+                            <a href="/" class="sitemap-link" data-cursor="hover">
+                                <span>Index</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="/work" class="sitemap-link" data-cursor="hover">
+                                <span>Work</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="/team" class="sitemap-link" data-cursor="hover">
+                                <span>Team</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="/studio" class="sitemap-link w--current" data-cursor="hover">
+                                <span>Studio</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <a href="/contact" class="sitemap-link" data-cursor="hover">
+                                <span>Contact</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-credits">
+                        <h4 class="footer-subtitle">Credits</h4>
+                        <div class="credits-content">
+                            <div class="credit-item">
+                                <p>Website By</p>
+                                <a href="https://www.niccolomiranda.com/" class="credit-link" data-cursor="hover">Niccolo' Miranda</a>
+                            </div>
+                            <div class="credit-item">
+                                <p>Dev support</p>
+                                <a href="https://www.iljavaneck.com" class="credit-link" data-cursor="hover">Ilja Van Eck</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-brand">
+                        <div class="brand-icon">
+                            <span>S</span>
+                        </div>
+                        <p class="copyright">Sonar 2023. All Rights Reserved.</p>
+                    </div>
+
+                    <div class="footer-legal">
+                        <a href="/privacy" class="legal-link" data-cursor="hover">Privacy</a>
+                        <span class="separator">|</span>
+                        <a href="/cookie" class="legal-link" data-cursor="hover">Cookie</a>
+                        <span class="separator">|</span>
+                        <a href="/terms" class="legal-link" data-cursor="hover">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/main.ts"></script>
+    <script type="module" src="src/studio.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sonar Music</title>
+    <meta name="description" content="Explore insights, stories, and behind-the-scenes content from the world of music composition and sound design at Sonar Music.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="stylesheet" href="src/blog.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/@vimeo/player@2.29.1/dist/player.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+    <div id="cursor-trail"></div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <div class="transition-overlay"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">SONAR</div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="/" class="logo" data-cursor="hover">
+                    <span class="logo-text">SONAR</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="/work" class="nav-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-link" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-link" data-cursor="hover">Team</a>
+                    <a href="/blog" class="nav-link w--current" data-cursor="hover">Blog</a>
+                    <a href="/contact" class="nav-link" data-cursor="hover">Contact</a>
+                </nav>
+
+                <!-- Right Side -->
+                <div class="header-right">
+                    <!-- Shopping Cart -->
+                    <div class="cart-icon" data-cursor="hover">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" data-cursor="hover">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile">
+            <div class="nav-mobile-content">
+                <nav class="nav-mobile-links">
+                    <a href="/work" class="nav-mobile-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-mobile-link" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-mobile-link" data-cursor="hover">Team</a>
+                    <a href="/blog" class="nav-mobile-link w--current" data-cursor="hover">Blog</a>
+                    <a href="/contact" class="nav-mobile-link" data-cursor="hover">Contact</a>
+                </nav>
+                <div class="nav-mobile-social">
+                    <p class="social-title">Socials</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-cursor="hover">Instagram</a>
+                        <a href="#" class="social-link" data-cursor="hover">LinkedIn</a>
+                        <a href="#" class="social-link" data-cursor="hover">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-main">
+        <!-- Blog Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero-content">
+                    <!-- Breadcrumb -->
+                    <nav class="breadcrumb animate-text">
+                        <a href="/">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">Blog</span>
+                    </nav>
+
+                    <h1 class="blog-hero-title animate-text-reveal">
+                        Stories Behind
+                        <span class="title-highlight">The Sound</span>
+                    </h1>
+                    <p class="blog-hero-description animate-text">
+                        Discover the creative process, industry insights, and behind-the-scenes stories
+                        from our composers and sound designers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Filters -->
+        <section class="blog-filters">
+            <div class="container">
+                <div class="blog-filter-controls">
+                    <div class="filter-group">
+                        <div class="filter-search">
+                            <input type="search" id="blogSearch" placeholder="Search articles..." class="search-input">
+                            <button class="search-btn" data-cursor="hover">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M19 19L13 13M15 8A7 7 0 1 1 1 8A7 7 0 0 1 15 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Category</label>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all" data-cursor="hover">
+                                <span>All</span>
+                            </button>
+                            <button class="filter-btn" data-filter="insights" data-cursor="hover">
+                                <span>Industry Insights</span>
+                            </button>
+                            <button class="filter-btn" data-filter="process" data-cursor="hover">
+                                <span>Creative Process</span>
+                            </button>
+                            <button class="filter-btn" data-filter="technology" data-cursor="hover">
+                                <span>Technology</span>
+                            </button>
+                            <button class="filter-btn" data-filter="interviews" data-cursor="hover">
+                                <span>Interviews</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Sort By</label>
+                        <select class="filter-select" id="sortSelect">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="popular">Most Popular</option>
+                            <option value="title">Title A-Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="filter-results">
+                    Showing <strong id="resultCount">12</strong> of <strong>24</strong> articles
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="featured-article">
+            <div class="container">
+                <div class="featured-article-card" data-cursor="hover">
+                    <div class="featured-article-image">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=500&fit=crop" alt="The Evolution of Film Scoring">
+                        <div class="article-badge">Featured</div>
+                        <div class="read-time">8 min read</div>
+                    </div>
+                    <div class="featured-article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Industry Insights</span>
+                            <span class="article-date">December 15, 2024</span>
+                        </div>
+                        <h2 class="featured-article-title">
+                            The Evolution of Film Scoring: From Orchestra to Digital Innovation
+                        </h2>
+                        <p class="featured-article-excerpt">
+                            Explore how film scoring has transformed over the decades, from traditional orchestral compositions
+                            to cutting-edge digital soundscapes, and what this means for modern storytelling.
+                        </p>
+                        <div class="article-author">
+                            <div class="author-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="James Mitchell">
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">James Mitchell</span>
+                                <span class="author-role">Lead Composer</span>
+                            </div>
+                        </div>
+                        <a href="/blog/evolution-of-film-scoring" class="read-more-btn" data-cursor="hover">
+                            Read Article
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid-section">
+            <div class="container">
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Article 1 -->
+                    <article class="blog-card" data-category="process" data-date="2024-12-10">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Behind the Scenes">
+                            <div class="read-time">5 min read</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="article-meta">
+                                <span class="article-category">Creative Process</span>
+                                <span class="article-date">December 10, 2024</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                Behind the Scenes: Creating Atmospheric Soundscapes
+                            </h3>
+                            <p class="blog-card-excerpt">
+                                A deep dive into our process for creating immersive atmospheric sounds that enhance narrative tension.
+                            </p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b332e234?w=50&h=50&fit=crop&crop=face" alt="Sarah Chen">
+                                </div>
+                                <span class="author-name">Sarah Chen</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="blog-card" data-category="technology" data-date="2024-12-08">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=250&fit=crop" alt="AI in Music">
+                            <div class="read-time">7 min read</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="article-meta">
+                                <span class="article-category">Technology</span>
+                                <span class="article-date">December 8, 2024</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                AI and Music Composition: Tool or Creative Partner?
+                            </h3>
+                            <p class="blog-card-excerpt">
+                                Exploring how artificial intelligence is reshaping music composition and what it means for human creativity.
+                            </p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="Michael Roberts">
+                                </div>
+                                <span class="author-name">Michael Roberts</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="blog-card" data-category="interviews" data-date="2024-12-05">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=250&fit=crop" alt="Director Interview">
+                            <div class="read-time">12 min read</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="article-meta">
+                                <span class="article-category">Interviews</span>
+                                <span class="article-date">December 5, 2024</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                In Conversation: Acclaimed Director on Sound Design
+                            </h3>
+                            <p class="blog-card-excerpt">
+                                An exclusive interview discussing the crucial role of sound design in modern filmmaking.
+                            </p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Emma Rodriguez">
+                                </div>
+                                <span class="author-name">Emma Rodriguez</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="blog-card" data-category="insights" data-date="2024-12-01">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=250&fit=crop" alt="Industry Trends">
+                            <div class="read-time">6 min read</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="article-meta">
+                                <span class="article-category">Industry Insights</span>
+                                <span class="article-date">December 1, 2024</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                2024 Music Industry Trends: What We've Learned
+                            </h3>
+                            <p class="blog-card-excerpt">
+                                A comprehensive look at the major trends shaping the music and sound design industry this year.
+                            </p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=50&h=50&fit=crop&crop=face" alt="David Park">
+                                </div>
+                                <span class="author-name">David Park</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="blog-card" data-category="process" data-date="2024-11-28">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop" alt="Recording Session">
+                            <div class="read-time">9 min read</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="article-meta">
+                                <span class="article-category">Creative Process</span>
+                                <span class="article-date">November 28, 2024</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                From Concept to Final Mix: Our Production Workflow
+                            </h3>
+                            <p class="blog-card-excerpt">
+                                Take a detailed look at how we transform initial concepts into polished, professional soundtracks.
+                            </p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=50&h=50&fit=crop&crop=face" alt="Lisa Zhang">
+                                </div>
+                                <span class="author-name">Lisa Zhang</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="blog-card" data-category="technology" data-date="2024-11-25">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop" alt="Studio Technology">
+                            <div class="read-time">4 min read</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="article-meta">
+                                <span class="article-category">Technology</span>
+                                <span class="article-date">November 25, 2024</span>
+                            </div>
+                            <h3 class="blog-card-title">
+                                Essential Studio Equipment for Modern Composers
+                            </h3>
+                            <p class="blog-card-excerpt">
+                                Our recommendations for the must-have tools and equipment for contemporary music production.
+                            </p>
+                            <div class="article-author">
+                                <div class="author-avatar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="James Mitchell">
+                                </div>
+                                <span class="author-name">James Mitchell</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-section">
+                    <button class="load-more-btn" id="loadMoreBtn" data-cursor="hover">
+                        <span class="btn-text">Load More Articles</span>
+                        <span class="btn-loading">
+                            <div class="loading-spinner"></div>
+                            Loading...
+                        </span>
+                    </button>
+                    <p class="load-more-info">
+                        Showing 6 of 24 articles
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="newsletter-cta">
+            <div class="container">
+                <div class="newsletter-cta-content">
+                    <h2 class="newsletter-cta-title animate-text">
+                        Stay Updated with Our Latest Insights
+                    </h2>
+                    <p class="newsletter-cta-description animate-text">
+                        Get the latest articles, industry news, and exclusive content delivered to your inbox.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-button" data-cursor="hover">
+                            Subscribe
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">SONAR</span>
+                    </div>
+                    <p class="footer-description">
+                        Crafting exceptional sound experiences for film, television, and new media.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Navigation</h4>
+                        <nav class="footer-nav">
+                            <a href="/" class="footer-link" data-cursor="hover">Home</a>
+                            <a href="/work" class="footer-link" data-cursor="hover">Work</a>
+                            <a href="/studio" class="footer-link" data-cursor="hover">Studio</a>
+                            <a href="/team" class="footer-link" data-cursor="hover">Team</a>
+                            <a href="/blog" class="footer-link" data-cursor="hover">Blog</a>
+                            <a href="/contact" class="footer-link" data-cursor="hover">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Services</h4>
+                        <nav class="footer-nav">
+                            <a href="#" class="footer-link" data-cursor="hover">Film Scoring</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Sound Design</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Audio Post</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Music Production</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <nav class="footer-nav">
+                            <a href="#" class="footer-link" data-cursor="hover">Instagram</a>
+                            <a href="#" class="footer-link" data-cursor="hover">LinkedIn</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Twitter</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Vimeo</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Sonar Music. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link" data-cursor="hover">Privacy Policy</a>
+                    <a href="#" class="footer-legal-link" data-cursor="hover">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>

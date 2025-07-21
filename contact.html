@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sonar Music</title>
+    <meta name="description" content="Get in touch with Sonar Music. Let's discuss your next project and how we can bring your vision to life with premium sound design.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/pages.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/@vimeo/player@2.29.1/dist/player.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+    <div id="cursor-trail"></div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <div class="transition-overlay"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">SONAR</div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="/" class="logo" data-cursor="hover">
+                    <span class="logo-text">SONAR</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="/work" class="nav-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-link" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-link" data-cursor="hover">Team</a>
+                    <a href="/contact" class="nav-link w--current" data-cursor="hover">Contact</a>
+                </nav>
+
+                <!-- Right Side -->
+                <div class="header-right">
+                    <!-- Shopping Cart -->
+                    <div class="cart-icon" data-cursor="hover">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" data-cursor="hover">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile">
+            <div class="nav-mobile-content">
+                <nav class="nav-mobile-links">
+                    <a href="/work" class="nav-mobile-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-mobile-link" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-mobile-link" data-cursor="hover">Team</a>
+                    <a href="/contact" class="nav-mobile-link w--current" data-cursor="hover">Contact</a>
+                </nav>
+                <div class="nav-mobile-social">
+                    <p class="social-title">Socials</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-cursor="hover">Instagram</a>
+                        <a href="#" class="social-link" data-cursor="hover">LinkedIn</a>
+                        <a href="#" class="social-link" data-cursor="hover">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-main">
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1 class="contact-hero-title animate-text-reveal">
+                        Let's Create Something
+                        <span class="title-highlight">Extraordinary</span>
+                    </h1>
+                    <p class="contact-hero-description animate-text">
+                        Ready to elevate your project with world-class sound design?
+                        We'd love to hear about your vision and explore how we can bring it to life.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-form-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <h2 class="contact-form-title animate-text">Get In Touch</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="company">Company (Optional)</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-field">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select Project Type</option>
+                                    <option value="film">Film Score</option>
+                                    <option value="tv">Television</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="game">Video Game</option>
+                                    <option value="podcast">Podcast</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="budget">Budget Range</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select Budget Range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-15k">$5,000 - $15,000</option>
+                                    <option value="15k-30k">$15,000 - $30,000</option>
+                                    <option value="30k-50k">$30,000 - $50,000</option>
+                                    <option value="over-50k">$50,000+</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="timeline">Project Timeline</label>
+                                <input type="text" id="timeline" name="timeline" placeholder="e.g., 2-3 months">
+                            </div>
+                            <div class="form-field">
+                                <label for="message">Tell Us About Your Project</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Describe your vision, goals, and any specific requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="form-submit btn-primary" data-cursor="hover">
+                                Send Message
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <h3 class="contact-info-title">Studio Address</h3>
+                            <p class="contact-info-text">
+                                Disney Studios<br>
+                                500 S Buena Vista St<br>
+                                Burbank, CA 91521<br>
+                                Australia
+                            </p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3 class="contact-info-title">Email</h3>
+                            <a href="mailto:hello@sonarmusic.com.au" class="contact-info-link" data-cursor="hover">
+                                hello@sonarmusic.com.au
+                            </a>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3 class="contact-info-title">Phone</h3>
+                            <a href="tel:+61234567890" class="contact-info-link" data-cursor="hover">
+                                +61 2 3456 7890
+                            </a>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3 class="contact-info-title">Studio Hours</h3>
+                            <p class="contact-info-text">
+                                Monday - Friday<br>
+                                9:00 AM - 6:00 PM AEST
+                            </p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h3 class="contact-info-title">Follow Us</h3>
+                            <div class="contact-social">
+                                <a href="#" class="contact-social-link" data-cursor="hover">Instagram</a>
+                                <a href="#" class="contact-social-link" data-cursor="hover">LinkedIn</a>
+                                <a href="#" class="contact-social-link" data-cursor="hover">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="faq-title animate-text">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" data-cursor="hover">
+                            What types of projects do you work on?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We specialize in music composition and sound design across film, television, commercials, video games, podcasts, and new media. Our team has experience with projects ranging from intimate documentaries to major studio productions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-cursor="hover">
+                            How long does a typical project take?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Project timelines vary depending on scope and complexity. A typical commercial might take 1-2 weeks, while a feature film score could take 2-4 months. We always work closely with your deadlines and production schedule.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-cursor="hover">
+                            Do you offer remote collaboration?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! We work with clients worldwide through secure file sharing, video conferencing, and real-time collaboration tools. Distance is no barrier to creating exceptional music together.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-cursor="hover">
+                            What's included in your music packages?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Our packages typically include original composition, professional recording, mixing and mastering, stems delivery, and usage rights. We customize each package based on your specific needs and budget.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-cursor="hover">
+                            Can you work with our existing team?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We love collaborating with directors, producers, sound mixers, and other creative professionals. We're flexible and can adapt to any workflow or creative process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">SONAR</span>
+                    </div>
+                    <p class="footer-description">
+                        Crafting exceptional sound experiences for film, television, and new media.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Navigation</h4>
+                        <nav class="footer-nav">
+                            <a href="/" class="footer-link" data-cursor="hover">Home</a>
+                            <a href="/work" class="footer-link" data-cursor="hover">Work</a>
+                            <a href="/studio" class="footer-link" data-cursor="hover">Studio</a>
+                            <a href="/team" class="footer-link" data-cursor="hover">Team</a>
+                            <a href="/contact" class="footer-link" data-cursor="hover">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Services</h4>
+                        <nav class="footer-nav">
+                            <a href="#" class="footer-link" data-cursor="hover">Film Scoring</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Sound Design</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Audio Post</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Music Production</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <nav class="footer-nav">
+                            <a href="#" class="footer-link" data-cursor="hover">Instagram</a>
+                            <a href="#" class="footer-link" data-cursor="hover">LinkedIn</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Twitter</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Vimeo</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Sonar Music. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link" data-cursor="hover">Privacy Policy</a>
+                    <a href="#" class="footer-legal-link" data-cursor="hover">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>

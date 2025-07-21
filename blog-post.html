@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Evolution of Film Scoring - Sonar Music Blog</title>
+    <meta name="description" content="Explore how film scoring has transformed over the decades, from traditional orchestral compositions to cutting-edge digital soundscapes.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="The Evolution of Film Scoring - Sonar Music Blog">
+    <meta property="og:description" content="Explore how film scoring has transformed over the decades, from traditional orchestral compositions to cutting-edge digital soundscapes.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://sonarmusic.com/blog/evolution-of-film-scoring">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Evolution of Film Scoring">
+    <meta name="twitter:description" content="Explore how film scoring has transformed over the decades, from traditional orchestral compositions to cutting-edge digital soundscapes.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=630&fit=crop">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/pages.css">
+    <link rel="stylesheet" href="src/blog.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/@vimeo/player@2.29.1/dist/player.min.js"></script>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "The Evolution of Film Scoring: From Orchestra to Digital Innovation",
+      "image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=630&fit=crop",
+      "author": {
+        "@type": "Person",
+        "name": "James Mitchell",
+        "jobTitle": "Lead Composer",
+        "url": "https://sonarmusic.com/team/james-mitchell"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sonar Music",
+        "logo": "https://sonarmusic.com/logo.png"
+      },
+      "datePublished": "2024-12-15",
+      "dateModified": "2024-12-15"
+    }
+    </script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor" class="cursor">
+        <div class="cursor-dot"></div>
+    </div>
+    <div id="cursor-trail"></div>
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition">
+        <div class="transition-overlay"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Reading Progress -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">SONAR</div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="/" class="logo" data-cursor="hover">
+                    <span class="logo-text">SONAR</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="/work" class="nav-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-link" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-link" data-cursor="hover">Team</a>
+                    <a href="/blog" class="nav-link w--current" data-cursor="hover">Blog</a>
+                    <a href="/contact" class="nav-link" data-cursor="hover">Contact</a>
+                </nav>
+
+                <!-- Right Side -->
+                <div class="header-right">
+                    <!-- Shopping Cart -->
+                    <div class="cart-icon" data-cursor="hover">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" data-cursor="hover">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="nav-mobile">
+            <div class="nav-mobile-content">
+                <nav class="nav-mobile-links">
+                    <a href="/work" class="nav-mobile-link" data-cursor="hover">Work</a>
+                    <a href="/studio" class="nav-mobile-link" data-cursor="hover">Studio</a>
+                    <a href="/team" class="nav-mobile-link" data-cursor="hover">Team</a>
+                    <a href="/blog" class="nav-mobile-link w--current" data-cursor="hover">Blog</a>
+                    <a href="/contact" class="nav-mobile-link" data-cursor="hover">Contact</a>
+                </nav>
+                <div class="nav-mobile-social">
+                    <p class="social-title">Socials</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-cursor="hover">Instagram</a>
+                        <a href="#" class="social-link" data-cursor="hover">LinkedIn</a>
+                        <a href="#" class="social-link" data-cursor="hover">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-post-main">
+        <!-- Blog Post Hero -->
+        <section class="blog-post-hero">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb animate-text">
+                    <a href="/">Home</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="/blog">Blog</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current">The Evolution of Film Scoring</span>
+                </nav>
+
+                <div class="blog-post-header">
+                    <div class="post-meta">
+                        <span class="post-category">Industry Insights</span>
+                        <span class="post-date">December 15, 2024</span>
+                        <span class="post-read-time">8 min read</span>
+                    </div>
+
+                    <h1 class="post-title animate-text-reveal">
+                        The Evolution of Film Scoring: From Orchestra to Digital Innovation
+                    </h1>
+
+                    <p class="post-excerpt animate-text">
+                        Explore how film scoring has transformed over the decades, from traditional orchestral
+                        compositions to cutting-edge digital soundscapes, and what this means for modern storytelling.
+                    </p>
+
+                    <div class="post-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="James Mitchell">
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">James Mitchell</span>
+                            <span class="author-role">Lead Composer</span>
+                            <div class="author-social">
+                                <a href="#" class="author-social-link" data-cursor="hover">LinkedIn</a>
+                                <a href="#" class="author-social-link" data-cursor="hover">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Image -->
+        <section class="blog-post-image">
+            <div class="container">
+                <div class="post-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&h=600&fit=crop"
+                         alt="Orchestra performing in a concert hall"
+                         class="post-featured-image">
+                    <div class="image-caption">
+                        A symphony orchestra performing, representing the traditional roots of film scoring
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Post Content -->
+        <section class="blog-post-content">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Main Content -->
+                    <article class="post-content">
+                        <div class="content-section">
+                            <p class="lead-paragraph">
+                                The art of film scoring has undergone a remarkable transformation since the early days
+                                of cinema. What began as simple piano accompaniments to silent films has evolved into
+                                a sophisticated blend of traditional orchestration and cutting-edge digital innovation.
+                            </p>
+
+                            <p>
+                                From the sweeping orchestral scores of John Williams to the electronic soundscapes of
+                                Hans Zimmer, film music has continually pushed the boundaries of what's possible in
+                                audio storytelling. This evolution reflects not just technological advancement, but
+                                also changing audience expectations and narrative complexity.
+                            </p>
+
+                            <h2>The Golden Age of Orchestral Scoring</h2>
+
+                            <p>
+                                The 1930s through 1950s are often referred to as the "Golden Age" of film music.
+                                During this period, major studios employed full-time composers and maintained their
+                                own orchestras. Composers like Max Steiner, Bernard Herrmann, and Miklós Rózsa
+                                established many of the conventions we still use today.
+                            </p>
+
+                            <blockquote class="quote-block">
+                                "A film score should be able to tell the story even if you remove all the visuals.
+                                It's the emotional backbone of the narrative."
+                                <cite>— Bernard Herrmann, legendary film composer</cite>
+                            </blockquote>
+
+                            <p>
+                                These pioneers understood that music wasn't just accompaniment—it was a narrative
+                                tool as powerful as cinematography or editing. They developed leitmotifs, established
+                                emotional palettes, and created musical languages that could convey complex
+                                psychological states.
+                            </p>
+
+                            <h2>The Synthesizer Revolution</h2>
+
+                            <p>
+                                The 1970s and 1980s brought a seismic shift with the introduction of synthesizers
+                                and electronic instruments. Suddenly, composers had access to sounds that had never
+                                existed before. Vangelis's score for "Blade Runner" (1982) demonstrated how
+                                electronic music could create entire sonic worlds.
+                            </p>
+
+                            <div class="content-image">
+                                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&h=400&fit=crop"
+                                     alt="Vintage synthesizer setup">
+                                <div class="image-caption">
+                                    Vintage synthesizers that revolutionized film music in the 1980s
+                                </div>
+                            </div>
+
+                            <p>
+                                This wasn't just about new sounds—it was about new possibilities. Electronic
+                                instruments allowed for precise control over timing, dynamics, and texture in ways
+                                that traditional instruments couldn't match. Composers could layer sounds, manipulate
+                                time, and create hybrid acoustic-electronic textures.
+                            </p>
+
+                            <h2>Digital Integration and Modern Techniques</h2>
+
+                            <p>
+                                Today's film composers work in a hybrid environment where traditional orchestration
+                                meets digital innovation. Sample libraries allow composers to access the sounds of
+                                any instrument, while digital audio workstations provide unprecedented control over
+                                the compositional process.
+                            </p>
+
+                            <h3>Key Modern Techniques Include:</h3>
+
+                            <ul class="content-list">
+                                <li><strong>Hybrid Orchestration:</strong> Combining live musicians with digital samples</li>
+                                <li><strong>Sound Design Integration:</strong> Blending music with environmental audio</li>
+                                <li><strong>Algorithmic Composition:</strong> Using AI and algorithms to generate musical ideas</li>
+                                <li><strong>Real-time Scoring:</strong> Interactive music that responds to on-screen action</li>
+                                <li><strong>Spatial Audio:</strong> Composing for surround sound and immersive environments</li>
+                            </ul>
+
+                            <h2>The Psychology of Modern Film Music</h2>
+
+                            <p>
+                                Modern audiences have developed sophisticated musical literacy through constant
+                                exposure to diverse soundtracks. This has pushed composers to be more subtle and
+                                innovative in their approach. The days of obvious "Mickey Mouse" scoring are largely
+                                behind us.
+                            </p>
+
+                            <p>
+                                Contemporary scores often work on multiple levels simultaneously—supporting the
+                                immediate emotional content while also contributing to larger thematic structures.
+                                Composers like Trent Reznor and Atticus Ross have shown how industrial and
+                                electronic textures can convey psychological complexity in films like "The Social Network."
+                            </p>
+
+                            <div class="pull-quote">
+                                "The best film music is felt rather than heard. It becomes part of the viewer's
+                                emotional experience without drawing attention to itself."
+                            </div>
+
+                            <h2>Technology's Impact on Creative Process</h2>
+
+                            <p>
+                                Digital tools haven't just changed the sounds available to composers—they've
+                                fundamentally altered the creative process itself. Modern composers can:
+                            </p>
+
+                            <ul class="content-list">
+                                <li>Rapidly prototype ideas using virtual instruments</li>
+                                <li>Collaborate remotely with directors and other creatives</li>
+                                <li>Make changes in real-time during scoring sessions</li>
+                                <li>Access vast libraries of cultural and historical musical styles</li>
+                                <li>Integrate found sounds and field recordings seamlessly</li>
+                            </ul>
+
+                            <h2>Looking Forward: The Future of Film Scoring</h2>
+
+                            <p>
+                                As we look to the future, several trends are emerging that will shape the next
+                                evolution of film music:
+                            </p>
+
+                            <h3>Artificial Intelligence and Machine Learning</h3>
+                            <p>
+                                AI tools are beginning to assist composers in generating ideas, analyzing emotional
+                                content, and even creating adaptive scores that respond to viewer behavior in
+                                interactive media.
+                            </p>
+
+                            <h3>Immersive Audio Technologies</h3>
+                            <p>
+                                With the rise of VR, AR, and spatial audio technologies, composers are exploring
+                                three-dimensional musical spaces where sound can move around and through the listener.
+                            </p>
+
+                            <h3>Cultural Fusion and Globalization</h3>
+                            <p>
+                                Global distribution has led to increased incorporation of world music elements and
+                                cultural fusion in film scores, creating more diverse and inclusive musical landscapes.
+                            </p>
+
+                            <h2>Conclusion</h2>
+
+                            <p>
+                                The evolution of film scoring reflects broader changes in technology, culture, and
+                                storytelling. While the tools have changed dramatically, the fundamental goal remains
+                                the same: to enhance the emotional impact of visual storytelling through the power
+                                of music.
+                            </p>
+
+                            <p>
+                                As we continue to push the boundaries of what's possible in film music, we honor
+                                the traditions established by the masters while embracing new technologies and
+                                creative approaches. The future of film scoring is bright, diverse, and full of
+                                unexplored possibilities.
+                            </p>
+                        </div>
+
+                        <!-- Post Tags -->
+                        <div class="post-tags">
+                            <h4>Tags:</h4>
+                            <div class="tag-list">
+                                <span class="tag">Film Scoring</span>
+                                <span class="tag">Music Technology</span>
+                                <span class="tag">Digital Audio</span>
+                                <span class="tag">Orchestration</span>
+                                <span class="tag">Sound Design</span>
+                            </div>
+                        </div>
+
+                        <!-- Share Buttons -->
+                        <div class="post-share">
+                            <h4>Share this article:</h4>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn" data-cursor="hover">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    Facebook
+                                </a>
+                                <a href="#" class="share-btn" data-cursor="hover">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                    Twitter
+                                </a>
+                                <a href="#" class="share-btn" data-cursor="hover">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                                <a href="#" class="share-btn" data-cursor="hover">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.949.949l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z"/>
+                                        <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z"/>
+                                    </svg>
+                                    Copy Link
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Sidebar -->
+                    <aside class="post-sidebar">
+                        <!-- Table of Contents -->
+                        <div class="sidebar-widget">
+                            <h4>Table of Contents</h4>
+                            <nav class="toc">
+                                <a href="#golden-age" class="toc-link">The Golden Age of Orchestral Scoring</a>
+                                <a href="#synthesizer-revolution" class="toc-link">The Synthesizer Revolution</a>
+                                <a href="#digital-integration" class="toc-link">Digital Integration</a>
+                                <a href="#modern-psychology" class="toc-link">Psychology of Modern Film Music</a>
+                                <a href="#future-trends" class="toc-link">Looking Forward</a>
+                            </nav>
+                        </div>
+
+                        <!-- Author Bio -->
+                        <div class="sidebar-widget">
+                            <h4>About the Author</h4>
+                            <div class="author-bio">
+                                <div class="author-avatar-large">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="James Mitchell">
+                                </div>
+                                <div class="author-bio-content">
+                                    <h5>James Mitchell</h5>
+                                    <p class="author-title">Lead Composer</p>
+                                    <p class="author-description">
+                                        James has over 15 years of experience in film scoring and has worked on
+                                        numerous award-winning productions. He specializes in hybrid orchestral-electronic
+                                        compositions.
+                                    </p>
+                                    <div class="author-social-links">
+                                        <a href="#" class="author-social-link" data-cursor="hover">LinkedIn</a>
+                                        <a href="#" class="author-social-link" data-cursor="hover">Twitter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Related Articles -->
+                        <div class="sidebar-widget">
+                            <h4>Related Articles</h4>
+                            <div class="related-articles">
+                                <article class="related-article">
+                                    <div class="related-image">
+                                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=80&fit=crop" alt="Related article">
+                                    </div>
+                                    <div class="related-content">
+                                        <h6><a href="#" data-cursor="hover">Behind the Scenes: Creating Atmospheric Soundscapes</a></h6>
+                                        <span class="related-date">December 10, 2024</span>
+                                    </div>
+                                </article>
+
+                                <article class="related-article">
+                                    <div class="related-image">
+                                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=100&h=80&fit=crop" alt="Related article">
+                                    </div>
+                                    <div class="related-content">
+                                        <h6><a href="#" data-cursor="hover">AI and Music Composition: Tool or Creative Partner?</a></h6>
+                                        <span class="related-date">December 8, 2024</span>
+                                    </div>
+                                </article>
+
+                                <article class="related-article">
+                                    <div class="related-image">
+                                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=100&h=80&fit=crop" alt="Related article">
+                                    </div>
+                                    <div class="related-content">
+                                        <h6><a href="#" data-cursor="hover">Essential Studio Equipment for Modern Composers</a></h6>
+                                        <span class="related-date">November 25, 2024</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="comments-section">
+            <div class="container">
+                <div class="comments-wrapper">
+                    <h3>Join the Discussion</h3>
+                    <p class="comments-intro">
+                        Share your thoughts on the evolution of film scoring. We'd love to hear from fellow composers,
+                        filmmakers, and music enthusiasts.
+                    </p>
+
+                    <!-- Comment Form -->
+                    <form class="comment-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="commentName">Name</label>
+                                <input type="text" id="commentName" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="commentEmail">Email</label>
+                                <input type="email" id="commentEmail" required>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="commentMessage">Comment</label>
+                            <textarea id="commentMessage" rows="6" required placeholder="Share your thoughts..."></textarea>
+                        </div>
+                        <button type="submit" class="comment-submit" data-cursor="hover">
+                            Post Comment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter CTA -->
+        <section class="newsletter-cta">
+            <div class="container">
+                <div class="newsletter-cta-content">
+                    <h2 class="newsletter-cta-title">
+                        More Insights from Sonar Music
+                    </h2>
+                    <p class="newsletter-cta-description">
+                        Get the latest articles about music composition, sound design, and industry trends delivered to your inbox.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                        <button type="submit" class="newsletter-button" data-cursor="hover">
+                            Subscribe
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <span class="logo-text">SONAR</span>
+                    </div>
+                    <p class="footer-description">
+                        Crafting exceptional sound experiences for film, television, and new media.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Navigation</h4>
+                        <nav class="footer-nav">
+                            <a href="/" class="footer-link" data-cursor="hover">Home</a>
+                            <a href="/work" class="footer-link" data-cursor="hover">Work</a>
+                            <a href="/studio" class="footer-link" data-cursor="hover">Studio</a>
+                            <a href="/team" class="footer-link" data-cursor="hover">Team</a>
+                            <a href="/blog" class="footer-link" data-cursor="hover">Blog</a>
+                            <a href="/contact" class="footer-link" data-cursor="hover">Contact</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Services</h4>
+                        <nav class="footer-nav">
+                            <a href="#" class="footer-link" data-cursor="hover">Film Scoring</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Sound Design</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Audio Post</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Music Production</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Connect</h4>
+                        <nav class="footer-nav">
+                            <a href="#" class="footer-link" data-cursor="hover">Instagram</a>
+                            <a href="#" class="footer-link" data-cursor="hover">LinkedIn</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Twitter</a>
+                            <a href="#" class="footer-link" data-cursor="hover">Vimeo</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Sonar Music. All rights reserved.
+                </p>
+                <div class="footer-legal">
+                    <a href="#" class="footer-legal-link" data-cursor="hover">Privacy Policy</a>
+                    <a href="#" class="footer-legal-link" data-cursor="hover">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+{
+  "team_members": [
+    {
+      "id": "james-mitchell",
+      "name": "James Mitchell",
+      "role": "Lead Composer",
+      "department": "Creative",
+      "level": "senior",
+      "bio": "James has over 15 years of experience in film scoring and has worked on numerous award-winning productions. He specializes in hybrid orchestral-electronic compositions and has a deep understanding of the cinematic landscape.",
+      "long_bio": "With a Master's degree in Film Scoring from Berklee College of Music, James Mitchell has established himself as one of Australia's premier film composers. His work spans across feature films, television series, and high-profile commercial campaigns. James's approach to composition combines traditional orchestral techniques with cutting-edge electronic production, creating unique sonic landscapes that enhance storytelling. He has collaborated with directors from around the world and his scores have been performed by major orchestras including the Sydney Symphony Orchestra.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
+      "email": "james@sonarmusic.com.au",
+      "phone": "+61 2 9876 5432",
+      "location": "Sydney, Australia",
+      "joined_date": "2018-03-15",
+      "specialties": [
+        "Film Scoring",
+        "Orchestral Composition",
+        "Electronic Music",
+        "Sound Design",
+        "Music Direction"
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "title": "AACTA Award for Best Original Music Score",
+          "project": "The Wilderness"
+        },
+        {
+          "year": "2022",
+          "title": "APRA/AMCOS Screen Music Award",
+          "project": "Urban Legends"
+        }
+      ],
+      "education": [
+        {
+          "degree": "Master of Music in Film Scoring",
+          "institution": "Berklee College of Music",
+          "year": "2007"
+        },
+        {
+          "degree": "Bachelor of Music Composition",
+          "institution": "Sydney Conservatorium of Music",
+          "year": "2005"
+        }
+      ],
+      "notable_projects": [
+        "Ladies In Black",
+        "The Art Of Sound",
+        "Speedo Commercial Campaign"
+      ],
+      "skills": {
+        "composition": 95,
+        "orchestration": 90,
+        "sound_design": 85,
+        "music_production": 88,
+        "collaboration": 92
+      },
+      "social_media": {
+        "linkedin": "https://linkedin.com/in/jamesmitchell",
+        "twitter": "https://twitter.com/jamesmitchell_music",
+        "instagram": "https://instagram.com/jamesmitchell_composer",
+        "website": "https://jamesmitchellmusic.com"
+      },
+      "languages": ["English", "Italian"],
+      "available_for_projects": true,
+      "featured": true,
+      "published": true,
+      "created_at": "2018-03-15",
+      "updated_at": "2024-12-01"
+    },
+    {
+      "id": "sarah-chen",
+      "name": "Sarah Chen",
+      "role": "Sound Designer",
+      "department": "Post-Production",
+      "level": "senior",
+      "bio": "Sarah is a multi-award winning sound designer with expertise in creating immersive audio experiences. Her innovative approach to sound design has elevated productions across film, television, and interactive media.",
+      "long_bio": "Sarah Chen brings a unique perspective to sound design, combining her background in acoustics and psychology with cutting-edge audio technology. With over 12 years in the industry, she has developed signature techniques for creating spatial audio experiences and has pioneered new approaches to environmental sound design. Her work on virtual reality projects has pushed the boundaries of immersive audio, and she regularly speaks at international conferences about the future of sound in media.",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b332e234?w=400&h=500&fit=crop&crop=face",
+      "email": "sarah@sonarmusic.com.au",
+      "phone": "+61 2 9876 5433",
+      "location": "Melbourne, Australia",
+      "joined_date": "2019-07-20",
+      "specialties": [
+        "Sound Design",
+        "Spatial Audio",
+        "VR/AR Audio",
+        "Environmental Sound",
+        "Audio Post-Production"
+      ],
+      "awards": [
+        {
+          "year": "2024",
+          "title": "AES Award for Innovation in Audio",
+          "project": "Immersive Soundscapes Project"
+        },
+        {
+          "year": "2023",
+          "title": "Sound Editors Guild Award",
+          "project": "The Speedway Murders"
+        }
+      ],
+      "education": [
+        {
+          "degree": "PhD in Acoustic Engineering",
+          "institution": "RMIT University",
+          "year": "2012"
+        },
+        {
+          "degree": "Bachelor of Audio Engineering",
+          "institution": "SAE Institute",
+          "year": "2009"
+        }
+      ],
+      "notable_projects": [
+        "The Speedway Murders",
+        "Speedo Commercial",
+        "The Hunter"
+      ],
+      "skills": {
+        "sound_design": 98,
+        "spatial_audio": 95,
+        "technical_innovation": 90,
+        "audio_engineering": 92,
+        "creative_problem_solving": 94
+      },
+      "social_media": {
+        "linkedin": "https://linkedin.com/in/sarahchen-audio",
+        "twitter": "https://twitter.com/sarahchen_sound"
+      },
+      "languages": ["English", "Mandarin", "Cantonese"],
+      "available_for_projects": true,
+      "featured": true,
+      "published": true,
+      "created_at": "2019-07-20",
+      "updated_at": "2024-11-28"
+    },
+    {
+      "id": "michael-roberts",
+      "name": "Michael Roberts",
+      "role": "Music Producer",
+      "department": "Production",
+      "level": "senior",
+      "bio": "Michael is an accomplished music producer and composer with a talent for bringing creative visions to life. His collaborative approach and technical expertise make him an invaluable part of our creative team.",
+      "long_bio": "Michael Roberts combines his deep musical knowledge with state-of-the-art production techniques to create compelling audio experiences. With experience spanning multiple genres and formats, he has developed a reputation for his ability to adapt musical styles to serve the story. His background in both classical composition and modern production techniques allows him to bridge the gap between traditional and contemporary approaches to film music.",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+      "email": "michael@sonarmusic.com.au",
+      "phone": "+61 2 9876 5434",
+      "location": "Sydney, Australia",
+      "joined_date": "2020-01-10",
+      "specialties": [
+        "Music Production",
+        "Composition",
+        "Electronic Music",
+        "Mixing & Mastering",
+        "Creative Direction"
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "title": "Producer of the Year",
+          "project": "Independent Music Awards"
+        }
+      ],
+      "education": [
+        {
+          "degree": "Bachelor of Music Production",
+          "institution": "Australian Institute of Music",
+          "year": "2015"
+        },
+        {
+          "degree": "Diploma in Audio Engineering",
+          "institution": "SAE Institute",
+          "year": "2013"
+        }
+      ],
+      "notable_projects": [
+        "Ladies In Black",
+        "The Art Of Sound",
+        "The Hunter"
+      ],
+      "skills": {
+        "music_production": 93,
+        "composition": 87,
+        "mixing": 90,
+        "creative_direction": 85,
+        "technical_skills": 88
+      },
+      "social_media": {
+        "linkedin": "https://linkedin.com/in/michaelroberts-producer",
+        "instagram": "https://instagram.com/michael_roberts_music"
+      },
+      "languages": ["English", "French"],
+      "available_for_projects": true,
+      "featured": true,
+      "published": true,
+      "created_at": "2020-01-10",
+      "updated_at": "2024-11-25"
+    },
+    {
+      "id": "emma-rodriguez",
+      "name": "Emma Rodriguez",
+      "role": "Composer & Orchestrator",
+      "department": "Creative",
+      "level": "mid",
+      "bio": "Emma is a talented composer and orchestrator who brings fresh perspectives to every project. Her classical training combined with modern sensibilities creates unique and memorable musical experiences.",
+      "long_bio": "Emma Rodriguez is a rising star in the world of film composition, known for her innovative orchestrations and emotionally resonant musical themes. With a strong foundation in classical composition and a keen interest in contemporary techniques, she creates scores that are both timeless and cutting-edge. Her collaborative spirit and attention to detail have made her a sought-after partner for directors looking to enhance their storytelling through music.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face",
+      "email": "emma@sonarmusic.com.au",
+      "phone": "+61 2 9876 5435",
+      "location": "Brisbane, Australia",
+      "joined_date": "2021-09-15",
+      "specialties": [
+        "Film Composition",
+        "Orchestration",
+        "Classical Music",
+        "Chamber Music",
+        "Thematic Development"
+      ],
+      "awards": [
+        {
+          "year": "2024",
+          "title": "Young Composer Award",
+          "project": "Queensland Music Festival"
+        }
+      ],
+      "education": [
+        {
+          "degree": "Master of Music Composition",
+          "institution": "Queensland Conservatorium",
+          "year": "2020"
+        },
+        {
+          "degree": "Bachelor of Music",
+          "institution": "University of Melbourne",
+          "year": "2018"
+        }
+      ],
+      "notable_projects": [
+        "The Convert",
+        "The Artful Dodger",
+        "Ladies In Black"
+      ],
+      "skills": {
+        "composition": 88,
+        "orchestration": 92,
+        "classical_training": 95,
+        "creativity": 90,
+        "collaboration": 87
+      },
+      "social_media": {
+        "linkedin": "https://linkedin.com/in/emmarodriguez-composer",
+        "instagram": "https://instagram.com/emma_rodriguez_music"
+      },
+      "languages": ["English", "Spanish"],
+      "available_for_projects": true,
+      "featured": false,
+      "published": true,
+      "created_at": "2021-09-15",
+      "updated_at": "2024-11-20"
+    },
+    {
+      "id": "david-park",
+      "name": "David Park",
+      "role": "Audio Engineer",
+      "department": "Technical",
+      "level": "mid",
+      "bio": "David is a skilled audio engineer with expertise in recording, mixing, and mastering. His technical precision and creative ear ensure that every project meets the highest standards of audio quality.",
+      "long_bio": "David Park brings technical excellence and creative insight to every project he touches. With extensive experience in both traditional recording techniques and cutting-edge digital workflows, he ensures that musical ideas are captured and presented with the highest fidelity. His understanding of both the artistic and technical aspects of audio production makes him an invaluable member of the team.",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face",
+      "email": "david@sonarmusic.com.au",
+      "phone": "+61 2 9876 5436",
+      "location": "Sydney, Australia",
+      "joined_date": "2022-03-01",
+      "specialties": [
+        "Audio Engineering",
+        "Recording",
+        "Mixing",
+        "Mastering",
+        "Technical Implementation"
+      ],
+      "awards": [],
+      "education": [
+        {
+          "degree": "Bachelor of Audio Engineering",
+          "institution": "JMC Academy",
+          "year": "2019"
+        },
+        {
+          "degree": "Certificate IV in Sound Production",
+          "institution": "TAFE NSW",
+          "year": "2017"
+        }
+      ],
+      "notable_projects": [
+        "The Speedway Murders",
+        "The Convert",
+        "The Artful Dodger"
+      ],
+      "skills": {
+        "audio_engineering": 90,
+        "recording": 88,
+        "mixing": 85,
+        "mastering": 82,
+        "technical_problem_solving": 92
+      },
+      "social_media": {
+        "linkedin": "https://linkedin.com/in/davidpark-audio"
+      },
+      "languages": ["English", "Korean"],
+      "available_for_projects": true,
+      "featured": false,
+      "published": true,
+      "created_at": "2022-03-01",
+      "updated_at": "2024-11-15"
+    },
+    {
+      "id": "lisa-zhang",
+      "name": "Lisa Zhang",
+      "role": "Junior Composer",
+      "department": "Creative",
+      "level": "junior",
+      "bio": "Lisa is an emerging talent in film composition with a fresh perspective and innovative approach to musical storytelling. Her enthusiasm and creativity bring new energy to our team.",
+      "long_bio": "Lisa Zhang represents the next generation of film composers, bringing fresh ideas and innovative techniques to every project. Despite being early in her career, she has already shown remarkable talent for creating emotionally compelling music that serves the story. Her background in both Western and Eastern musical traditions gives her a unique perspective that enriches our creative process.",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face",
+      "email": "lisa@sonarmusic.com.au",
+      "phone": "+61 2 9876 5437",
+      "location": "Melbourne, Australia",
+      "joined_date": "2023-06-01",
+      "specialties": [
+        "Film Composition",
+        "Electronic Music",
+        "World Music",
+        "Music Theory",
+        "Creative Innovation"
+      ],
+      "awards": [],
+      "education": [
+        {
+          "degree": "Bachelor of Music Composition",
+          "institution": "Monash University",
+          "year": "2023"
+        },
+        {
+          "degree": "Diploma in Music Technology",
+          "institution": "Box Hill Institute",
+          "year": "2021"
+        }
+      ],
+      "notable_projects": [
+        "The Speedway Murders",
+        "Gold",
+        "The Artful Dodger"
+      ],
+      "skills": {
+        "composition": 80,
+        "electronic_music": 85,
+        "creativity": 88,
+        "music_theory": 90,
+        "adaptability": 87
+      },
+      "social_media": {
+        "instagram": "https://instagram.com/lisa_zhang_composer",
+        "tiktok": "https://tiktok.com/@lisazhang_music"
+      },
+      "languages": ["English", "Mandarin"],
+      "available_for_projects": true,
+      "featured": false,
+      "published": true,
+      "created_at": "2023-06-01",
+      "updated_at": "2024-11-10"
+    }
+  ],
+  "departments": [
+    {
+      "id": "creative",
+      "name": "Creative",
+      "description": "Composers and creative directors",
+      "color": "#c8966a"
+    },
+    {
+      "id": "production",
+      "name": "Production",
+      "description": "Music producers and production managers",
+      "color": "#4a9eff"
+    },
+    {
+      "id": "post-production",
+      "name": "Post-Production",
+      "description": "Sound designers and post-production specialists",
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "technical",
+      "name": "Technical",
+      "description": "Audio engineers and technical specialists",
+      "color": "#4ecdc4"
+    }
+  ],
+  "levels": [
+    {
+      "id": "senior",
+      "name": "Senior",
+      "description": "Senior level team members",
+      "years_experience": "10+"
+    },
+    {
+      "id": "mid",
+      "name": "Mid-Level",
+      "description": "Mid-level team members",
+      "years_experience": "5-10"
+    },
+    {
+      "id": "junior",
+      "name": "Junior",
+      "description": "Junior level team members",
+      "years_experience": "0-5"
+    }
+  ],
+  "specialties": [
+    "Film Scoring",
+    "Sound Design",
+    "Orchestral Composition",
+    "Electronic Music",
+    "Music Production",
+    "Audio Engineering",
+    "Spatial Audio",
+    "VR/AR Audio",
+    "Mixing & Mastering",
+    "Orchestration",
+    "Classical Music",
+    "World Music",
+    "Creative Direction",
+    "Music Theory",
+    "Environmental Sound",
+    "Audio Post-Production"
+  ]
+}

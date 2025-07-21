@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonar Music - Brand Style Guide & Component Library</title>
+    <meta name="description" content="Comprehensive brand style guide and component library for the Sonar Music website, including design tokens, components, and usage guidelines.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../src/styles.css">
+    <link rel="stylesheet" href="style-guide.css">
+
+    <!-- Prism.js for code syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body class="style-guide-body">
+    <!-- Header -->
+    <header class="sg-header">
+        <div class="container">
+            <div class="sg-header-content">
+                <h1 class="sg-title">
+                    <span class="logo-text">SONAR</span>
+                    Style Guide
+                </h1>
+                <p class="sg-subtitle">Brand Guidelines & Component Library</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sg-nav">
+        <div class="container">
+            <ul class="sg-nav-list">
+                <li><a href="#overview" class="sg-nav-link">Overview</a></li>
+                <li><a href="#brand" class="sg-nav-link">Brand Identity</a></li>
+                <li><a href="#design-tokens" class="sg-nav-link">Design Tokens</a></li>
+                <li><a href="#typography" class="sg-nav-link">Typography</a></li>
+                <li><a href="#colors" class="sg-nav-link">Colors</a></li>
+                <li><a href="#components" class="sg-nav-link">Components</a></li>
+                <li><a href="#layouts" class="sg-nav-link">Layouts</a></li>
+                <li><a href="#animations" class="sg-nav-link">Animations</a></li>
+                <li><a href="#guidelines" class="sg-nav-link">Guidelines</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="sg-main">
+        <div class="container">
+            <!-- Overview -->
+            <section id="overview" class="sg-section">
+                <h2 class="sg-section-title">Overview</h2>
+                <div class="sg-content">
+                    <p class="sg-lead">
+                        This style guide documents the visual identity, design system, and component library
+                        for the Sonar Music website. It serves as a comprehensive reference for maintaining
+                        consistency across all digital touchpoints.
+                    </p>
+
+                    <div class="sg-grid">
+                        <div class="sg-card">
+                            <h3>Design Philosophy</h3>
+                            <p>Our design philosophy centers on creating immersive, cinematic experiences that reflect the quality and artistry of our sound design work.</p>
+                        </div>
+                        <div class="sg-card">
+                            <h3>Technical Stack</h3>
+                            <p>Built with vanilla HTML, CSS, and TypeScript for maximum compatibility with Webflow and other platforms.</p>
+                        </div>
+                        <div class="sg-card">
+                            <h3>Accessibility</h3>
+                            <p>All components are designed with accessibility in mind, following WCAG 2.1 AA guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Identity -->
+            <section id="brand" class="sg-section">
+                <h2 class="sg-section-title">Brand Identity</h2>
+                <div class="sg-content">
+                    <div class="sg-subsection">
+                        <h3>Logo</h3>
+                        <div class="sg-logo-showcase">
+                            <div class="sg-logo-variant">
+                                <div class="logo-display">
+                                    <span class="logo-text">SONAR</span>
+                                </div>
+                                <p class="sg-caption">Primary Logo</p>
+                            </div>
+                            <div class="sg-logo-variant">
+                                <div class="logo-display logo-light">
+                                    <span class="logo-text">SONAR</span>
+                                </div>
+                                <p class="sg-caption">Light Background</p>
+                            </div>
+                        </div>
+
+                        <div class="sg-specs">
+                            <h4>Logo Specifications</h4>
+                            <ul>
+                                <li><strong>Font:</strong> Inter Black (900)</li>
+                                <li><strong>Letter Spacing:</strong> 0.1em</li>
+                                <li><strong>Minimum Size:</strong> 80px width</li>
+                                <li><strong>Clear Space:</strong> 1x height on all sides</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Brand Voice</h3>
+                        <div class="sg-brand-voice">
+                            <div class="sg-voice-trait">
+                                <h4>Professional</h4>
+                                <p>We communicate with expertise and authority in our field</p>
+                            </div>
+                            <div class="sg-voice-trait">
+                                <h4>Creative</h4>
+                                <p>Our language reflects innovation and artistic expression</p>
+                            </div>
+                            <div class="sg-voice-trait">
+                                <h4>Collaborative</h4>
+                                <p>We emphasize partnership and shared creative vision</p>
+                            </div>
+                            <div class="sg-voice-trait">
+                                <h4>Cinematic</h4>
+                                <p>Our tone evokes the drama and emotion of film</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Design Tokens -->
+            <section id="design-tokens" class="sg-section">
+                <h2 class="sg-section-title">Design Tokens</h2>
+                <div class="sg-content">
+                    <p>Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes.</p>
+
+                    <div class="sg-subsection">
+                        <h3>Spacing Scale</h3>
+                        <div class="sg-spacing-scale">
+                            <div class="sg-spacing-item" data-size="4px">4px</div>
+                            <div class="sg-spacing-item" data-size="8px">8px</div>
+                            <div class="sg-spacing-item" data-size="12px">12px</div>
+                            <div class="sg-spacing-item" data-size="16px">16px</div>
+                            <div class="sg-spacing-item" data-size="24px">24px</div>
+                            <div class="sg-spacing-item" data-size="32px">32px</div>
+                            <div class="sg-spacing-item" data-size="48px">48px</div>
+                            <div class="sg-spacing-item" data-size="64px">64px</div>
+                            <div class="sg-spacing-item" data-size="96px">96px</div>
+                            <div class="sg-spacing-item" data-size="128px">128px</div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Border Radius</h3>
+                        <div class="sg-radius-scale">
+                            <div class="sg-radius-item" style="border-radius: 4px;">4px</div>
+                            <div class="sg-radius-item" style="border-radius: 6px;">6px</div>
+                            <div class="sg-radius-item" style="border-radius: 8px;">8px</div>
+                            <div class="sg-radius-item" style="border-radius: 12px;">12px</div>
+                            <div class="sg-radius-item" style="border-radius: 16px;">16px</div>
+                            <div class="sg-radius-item" style="border-radius: 50%;">50%</div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Shadows</h3>
+                        <div class="sg-shadow-scale">
+                            <div class="sg-shadow-item sg-shadow-small">Small</div>
+                            <div class="sg-shadow-item sg-shadow-medium">Medium</div>
+                            <div class="sg-shadow-item sg-shadow-large">Large</div>
+                            <div class="sg-shadow-item sg-shadow-xlarge">X-Large</div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Animation Durations</h3>
+                        <div class="sg-animation-tokens">
+                            <div class="sg-token">
+                                <span class="token-name">Fast</span>
+                                <span class="token-value">0.15s</span>
+                            </div>
+                            <div class="sg-token">
+                                <span class="token-name">Normal</span>
+                                <span class="token-value">0.3s</span>
+                            </div>
+                            <div class="sg-token">
+                                <span class="token-name">Slow</span>
+                                <span class="token-value">0.5s</span>
+                            </div>
+                            <div class="sg-token">
+                                <span class="token-name">Slower</span>
+                                <span class="token-value">0.8s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Typography -->
+            <section id="typography" class="sg-section">
+                <h2 class="sg-section-title">Typography</h2>
+                <div class="sg-content">
+                    <div class="sg-subsection">
+                        <h3>Font Family</h3>
+                        <div class="sg-font-showcase">
+                            <div class="sg-font-sample">
+                                <h4>Inter</h4>
+                                <p class="sg-font-display">The quick brown fox jumps over the lazy dog</p>
+                                <p class="sg-font-weights">
+                                    <span style="font-weight: 300;">Light (300)</span>
+                                    <span style="font-weight: 400;">Regular (400)</span>
+                                    <span style="font-weight: 500;">Medium (500)</span>
+                                    <span style="font-weight: 600;">SemiBold (600)</span>
+                                    <span style="font-weight: 700;">Bold (700)</span>
+                                    <span style="font-weight: 800;">ExtraBold (800)</span>
+                                    <span style="font-weight: 900;">Black (900)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Type Scale</h3>
+                        <div class="sg-type-scale">
+                            <div class="sg-type-sample">
+                                <h1 class="sg-type-h1">Heading 1</h1>
+                                <div class="sg-type-specs">
+                                    <span>clamp(3rem, 8vw, 6rem)</span>
+                                    <span>Font Weight: 800</span>
+                                    <span>Line Height: 0.9</span>
+                                </div>
+                            </div>
+                            <div class="sg-type-sample">
+                                <h2 class="sg-type-h2">Heading 2</h2>
+                                <div class="sg-type-specs">
+                                    <span>clamp(2.5rem, 6vw, 4rem)</span>
+                                    <span>Font Weight: 700</span>
+                                    <span>Line Height: 1.1</span>
+                                </div>
+                            </div>
+                            <div class="sg-type-sample">
+                                <h3 class="sg-type-h3">Heading 3</h3>
+                                <div class="sg-type-specs">
+                                    <span>clamp(2rem, 4vw, 3rem)</span>
+                                    <span>Font Weight: 700</span>
+                                    <span>Line Height: 1.2</span>
+                                </div>
+                            </div>
+                            <div class="sg-type-sample">
+                                <h4 class="sg-type-h4">Heading 4</h4>
+                                <div class="sg-type-specs">
+                                    <span>1.5rem</span>
+                                    <span>Font Weight: 600</span>
+                                    <span>Line Height: 1.3</span>
+                                </div>
+                            </div>
+                            <div class="sg-type-sample">
+                                <p class="sg-type-body">Body Text</p>
+                                <div class="sg-type-specs">
+                                    <span>1rem</span>
+                                    <span>Font Weight: 400</span>
+                                    <span>Line Height: 1.6</span>
+                                </div>
+                            </div>
+                            <div class="sg-type-sample">
+                                <p class="sg-type-small">Small Text</p>
+                                <div class="sg-type-specs">
+                                    <span>0.875rem</span>
+                                    <span>Font Weight: 400</span>
+                                    <span>Line Height: 1.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Colors -->
+            <section id="colors" class="sg-section">
+                <h2 class="sg-section-title">Colors</h2>
+                <div class="sg-content">
+                    <div class="sg-subsection">
+                        <h3>Primary Palette</h3>
+                        <div class="sg-color-grid">
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #c8966a;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Accent Gold</h4>
+                                    <p>#c8966a</p>
+                                    <p>rgb(200, 150, 106)</p>
+                                </div>
+                            </div>
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #f5f5f5;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Foreground</h4>
+                                    <p>#f5f5f5</p>
+                                    <p>rgb(245, 245, 245)</p>
+                                </div>
+                            </div>
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #1a1a1a;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Background Primary</h4>
+                                    <p>#1a1a1a</p>
+                                    <p>rgb(26, 26, 26)</p>
+                                </div>
+                            </div>
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #151515;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Background Secondary</h4>
+                                    <p>#151515</p>
+                                    <p>rgb(21, 21, 21)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Semantic Colors</h3>
+                        <div class="sg-color-grid">
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #28a745;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Success</h4>
+                                    <p>#28a745</p>
+                                </div>
+                            </div>
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #dc3545;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Error</h4>
+                                    <p>#dc3545</p>
+                                </div>
+                            </div>
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #ffc107;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Warning</h4>
+                                    <p>#ffc107</p>
+                                </div>
+                            </div>
+                            <div class="sg-color-card">
+                                <div class="sg-color-swatch" style="background-color: #17a2b8;"></div>
+                                <div class="sg-color-info">
+                                    <h4>Info</h4>
+                                    <p>#17a2b8</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Opacity Scale</h3>
+                        <div class="sg-opacity-scale">
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.1);">10%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.2);">20%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.3);">30%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.4);">40%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.5);">50%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.6);">60%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.7);">70%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.8);">80%</div>
+                            <div class="sg-opacity-item" style="background-color: rgba(245, 245, 245, 0.9);">90%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Components -->
+            <section id="components" class="sg-section">
+                <h2 class="sg-section-title">Components</h2>
+                <div class="sg-content">
+
+                    <div class="sg-subsection">
+                        <h3>Buttons</h3>
+                        <div class="sg-component-showcase">
+                            <div class="sg-component-group">
+                                <h4>Primary Buttons</h4>
+                                <div class="sg-component-examples">
+                                    <button class="btn-primary">Primary Button</button>
+                                    <button class="btn-primary" disabled>Disabled</button>
+                                </div>
+                                <pre class="sg-code"><code class="language-html">&lt;button class="btn-primary"&gt;Primary Button&lt;/button&gt;</code></pre>
+                            </div>
+
+                            <div class="sg-component-group">
+                                <h4>Secondary Buttons</h4>
+                                <div class="sg-component-examples">
+                                    <button class="btn-secondary">Secondary Button</button>
+                                    <button class="btn-secondary" disabled>Disabled</button>
+                                </div>
+                                <pre class="sg-code"><code class="language-html">&lt;button class="btn-secondary"&gt;Secondary Button&lt;/button&gt;</code></pre>
+                            </div>
+
+                            <div class="sg-component-group">
+                                <h4>Button Sizes</h4>
+                                <div class="sg-component-examples">
+                                    <button class="btn-primary btn-sm">Small</button>
+                                    <button class="btn-primary">Default</button>
+                                    <button class="btn-primary btn-lg">Large</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Form Elements</h3>
+                        <div class="sg-component-showcase">
+                            <div class="sg-component-group">
+                                <h4>Input Fields</h4>
+                                <div class="sg-component-examples">
+                                    <div class="form-field">
+                                        <label for="sg-input">Label</label>
+                                        <input type="text" id="sg-input" placeholder="Placeholder text">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="sg-input-error">Error State</label>
+                                        <input type="text" id="sg-input-error" class="error" value="Invalid input">
+                                        <span class="error-message">This field has an error</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sg-component-group">
+                                <h4>Select Dropdown</h4>
+                                <div class="sg-component-examples">
+                                    <div class="form-field">
+                                        <label for="sg-select">Select Option</label>
+                                        <select id="sg-select">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sg-component-group">
+                                <h4>Textarea</h4>
+                                <div class="sg-component-examples">
+                                    <div class="form-field">
+                                        <label for="sg-textarea">Message</label>
+                                        <textarea id="sg-textarea" rows="4" placeholder="Enter your message here..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Cards</h3>
+                        <div class="sg-component-showcase">
+                            <div class="sg-component-group">
+                                <h4>Project Card</h4>
+                                <div class="sg-component-examples">
+                                    <div class="project-card">
+                                        <div class="project-thumbnail" style="background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop');"></div>
+                                        <div class="work-duration">02:15</div>
+                                        <div class="project-content">
+                                            <div class="work-meta">
+                                                <span class="work-year">2024</span>
+                                                <span class="work-category">Film</span>
+                                            </div>
+                                            <h3 class="work-title">Project Title</h3>
+                                            <p class="work-description">Brief description of the project and its key features.</p>
+                                            <div class="work-tags">
+                                                <span class="tag">Film</span>
+                                                <span class="tag">Drama</span>
+                                            </div>
+                                        </div>
+                                        <div class="work-play-btn">▶</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sg-component-group">
+                                <h4>Blog Card</h4>
+                                <div class="sg-component-examples">
+                                    <article class="blog-card">
+                                        <div class="blog-card-image">
+                                            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Blog post">
+                                            <div class="read-time">5 min read</div>
+                                        </div>
+                                        <div class="blog-card-content">
+                                            <div class="article-meta">
+                                                <span class="article-category">Creative Process</span>
+                                                <span class="article-date">December 10, 2024</span>
+                                            </div>
+                                            <h3 class="blog-card-title">Blog Post Title</h3>
+                                            <p class="blog-card-excerpt">Brief excerpt from the blog post content...</p>
+                                            <div class="article-author">
+                                                <div class="author-avatar">
+                                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b332e234?w=50&h=50&fit=crop&crop=face" alt="Author">
+                                                </div>
+                                                <span class="author-name">Author Name</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Navigation</h3>
+                        <div class="sg-component-showcase">
+                            <div class="sg-component-group">
+                                <h4>Header Navigation</h4>
+                                <div class="sg-component-examples">
+                                    <nav class="nav-desktop">
+                                        <a href="#" class="nav-link">Work</a>
+                                        <a href="#" class="nav-link">Studio</a>
+                                        <a href="#" class="nav-link w--current">Team</a>
+                                        <a href="#" class="nav-link">Contact</a>
+                                    </nav>
+                                </div>
+                            </div>
+
+                            <div class="sg-component-group">
+                                <h4>Breadcrumb</h4>
+                                <div class="sg-component-examples">
+                                    <nav class="breadcrumb">
+                                        <a href="#">Home</a>
+                                        <span class="breadcrumb-separator">/</span>
+                                        <a href="#">Blog</a>
+                                        <span class="breadcrumb-separator">/</span>
+                                        <span class="breadcrumb-current">Article Title</span>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layouts -->
+            <section id="layouts" class="sg-section">
+                <h2 class="sg-section-title">Layouts</h2>
+                <div class="sg-content">
+                    <div class="sg-subsection">
+                        <h3>Grid System</h3>
+                        <p>Our grid system is based on CSS Grid and Flexbox for maximum flexibility and responsiveness.</p>
+
+                        <div class="sg-grid-demo">
+                            <div class="sg-grid-item">1</div>
+                            <div class="sg-grid-item">2</div>
+                            <div class="sg-grid-item">3</div>
+                            <div class="sg-grid-item">4</div>
+                        </div>
+
+                        <pre class="sg-code"><code class="language-css">.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}</code></pre>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Container</h3>
+                        <p>The container class provides consistent max-width and padding across all pages.</p>
+
+                        <pre class="sg-code"><code class="language-css">.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}</code></pre>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Responsive Breakpoints</h3>
+                        <div class="sg-breakpoints">
+                            <div class="sg-breakpoint">
+                                <h4>Mobile</h4>
+                                <code>max-width: 480px</code>
+                            </div>
+                            <div class="sg-breakpoint">
+                                <h4>Tablet</h4>
+                                <code>max-width: 768px</code>
+                            </div>
+                            <div class="sg-breakpoint">
+                                <h4>Desktop</h4>
+                                <code>max-width: 1024px</code>
+                            </div>
+                            <div class="sg-breakpoint">
+                                <h4>Large Desktop</h4>
+                                <code>min-width: 1200px</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Animations -->
+            <section id="animations" class="sg-section">
+                <h2 class="sg-section-title">Animations</h2>
+                <div class="sg-content">
+                    <div class="sg-subsection">
+                        <h3>Animation Principles</h3>
+                        <div class="sg-animation-principles">
+                            <div class="sg-principle">
+                                <h4>Smooth & Natural</h4>
+                                <p>All animations should feel smooth and natural, never jarring or disruptive.</p>
+                            </div>
+                            <div class="sg-principle">
+                                <h4>Performance First</h4>
+                                <p>Animations are optimized for performance using GPU-accelerated properties.</p>
+                            </div>
+                            <div class="sg-principle">
+                                <h4>Purposeful</h4>
+                                <p>Every animation serves a purpose: guiding attention, providing feedback, or enhancing storytelling.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Easing Functions</h3>
+                        <div class="sg-easing-functions">
+                            <div class="sg-easing-item">
+                                <span class="sg-easing-name">Ease Out</span>
+                                <span class="sg-easing-value">cubic-bezier(0.25, 1, 0.5, 1)</span>
+                            </div>
+                            <div class="sg-easing-item">
+                                <span class="sg-easing-name">Ease In Out</span>
+                                <span class="sg-easing-value">cubic-bezier(0.4, 0, 0.2, 1)</span>
+                            </div>
+                            <div class="sg-easing-item">
+                                <span class="sg-easing-name">Back Out</span>
+                                <span class="sg-easing-value">cubic-bezier(0.175, 0.885, 0.32, 1.275)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Animation Examples</h3>
+                        <div class="sg-animation-demos">
+                            <div class="sg-animation-demo">
+                                <div class="sg-demo-element sg-fade-in">Fade In</div>
+                                <button class="sg-demo-trigger" data-animation="fade-in">Trigger</button>
+                            </div>
+                            <div class="sg-animation-demo">
+                                <div class="sg-demo-element sg-slide-up">Slide Up</div>
+                                <button class="sg-demo-trigger" data-animation="slide-up">Trigger</button>
+                            </div>
+                            <div class="sg-animation-demo">
+                                <div class="sg-demo-element sg-scale-in">Scale In</div>
+                                <button class="sg-demo-trigger" data-animation="scale-in">Trigger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guidelines -->
+            <section id="guidelines" class="sg-section">
+                <h2 class="sg-section-title">Usage Guidelines</h2>
+                <div class="sg-content">
+                    <div class="sg-subsection">
+                        <h3>Do's and Don'ts</h3>
+                        <div class="sg-guidelines">
+                            <div class="sg-guideline sg-do">
+                                <h4>✓ Do</h4>
+                                <ul>
+                                    <li>Use consistent spacing from the spacing scale</li>
+                                    <li>Maintain proper contrast ratios for accessibility</li>
+                                    <li>Follow the established typography hierarchy</li>
+                                    <li>Use animations to enhance user experience</li>
+                                    <li>Test components across different screen sizes</li>
+                                </ul>
+                            </div>
+                            <div class="sg-guideline sg-dont">
+                                <h4>✗ Don't</h4>
+                                <ul>
+                                    <li>Create new colors outside the established palette</li>
+                                    <li>Use multiple font families within the same context</li>
+                                    <li>Override component styles without proper consideration</li>
+                                    <li>Create overly complex or distracting animations</li>
+                                    <li>Ignore responsive design principles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Accessibility</h3>
+                        <div class="sg-accessibility">
+                            <div class="sg-a11y-item">
+                                <h4>Color Contrast</h4>
+                                <p>All text must meet WCAG 2.1 AA standards with a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text.</p>
+                            </div>
+                            <div class="sg-a11y-item">
+                                <h4>Keyboard Navigation</h4>
+                                <p>All interactive elements must be accessible via keyboard navigation with visible focus indicators.</p>
+                            </div>
+                            <div class="sg-a11y-item">
+                                <h4>Screen Readers</h4>
+                                <p>Use semantic HTML and proper ARIA labels to ensure compatibility with screen readers.</p>
+                            </div>
+                            <div class="sg-a11y-item">
+                                <h4>Motion Sensitivity</h4>
+                                <p>Respect the prefers-reduced-motion setting and provide alternatives for users sensitive to motion.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sg-subsection">
+                        <h3>Performance</h3>
+                        <div class="sg-performance">
+                            <div class="sg-perf-item">
+                                <h4>Image Optimization</h4>
+                                <p>Use appropriate image formats (WebP, AVIF) and sizes. Implement lazy loading for below-the-fold images.</p>
+                            </div>
+                            <div class="sg-perf-item">
+                                <h4>CSS Optimization</h4>
+                                <p>Minimize CSS, remove unused styles, and use efficient selectors. Prefer CSS over JavaScript for animations.</p>
+                            </div>
+                            <div class="sg-perf-item">
+                                <h4>JavaScript Performance</h4>
+                                <p>Use modern JavaScript features, minimize bundle size, and implement code splitting where appropriate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="sg-footer">
+        <div class="container">
+            <p>&copy; 2024 Sonar Music. This style guide is part of our design system documentation.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Simple script for animation demos
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('sg-demo-trigger')) {
+                const animation = e.target.getAttribute('data-animation');
+                const element = e.target.previousElementSibling;
+
+                element.style.animation = 'none';
+                element.offsetHeight; // Trigger reflow
+                element.style.animation = `sg-${animation} 0.5s ease-out`;
+            }
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.sg-nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
